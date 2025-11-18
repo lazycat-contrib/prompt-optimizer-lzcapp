@@ -1,0 +1,100 @@
+params:
+  - id: access_username
+    type: string
+    name: "access username"
+    description: "the access username"
+
+  - id: access_password
+    type: string
+    name: "access password"
+    description: "the access password"
+
+  - id: openai_apikey
+    type: string
+    name: "openapi api key"
+    optional: true
+    description: "the openai api key"
+
+  - id: gemini_apikey
+    type: string
+    name: "gemini api key"
+    description: "the gemini api key"
+    optional: true
+
+  - id: deepseek_apikey
+    type: string
+    name: "deepseek api key"
+    description: "the deepseek key"
+    optional: true
+
+  - id: siliconflow_apikey
+    type: string
+    name: "siliconflow api key"
+    description: "the siliconflow api key"
+    optional: true
+
+  - id: custom_apikey
+    type: string
+    name: "custom api key"
+    description: "the custom api key"
+    optional: true
+
+  - id: custom_api_base_url
+    type: string
+    name: "custom api base url"
+    description: "the custom api base url"
+    optional: true
+
+  - id: custom_api_model
+    type: string
+    name: "custom api model"
+    description: "custom api model"
+    optional: true
+
+  - id: mcp_default_language
+    type: string
+    name: "mcp default language"
+    description: "mcp default language"
+    default_value: "zh"
+
+locales:
+  zh:
+    access_username:
+      name: "访问用户名"
+      description: "您要设置的访问用户名"
+
+    access_password:
+      name: "访问密码"
+      description: "您要设置的访问密码"
+
+    openai_apikey:
+      name: "OpenAI API密钥"
+      description: "用于访问OpenAI模型的API密钥（可选）"
+
+    gemini_apikey:
+      name: "Gemini API密钥"
+      description: "用于访问Gemini模型的API密钥（可选）"
+
+    deepseek_apikey:
+      name: "Deepseek API密钥"
+      description: "用于访问Deepseek模型的API密钥（可选）"
+
+    siliconflow_apikey:
+      name: "Siliconflow API密钥"
+      description: "用于访问Siliconflow模型的API密钥（可选）"
+
+    custom_apikey:
+      name: "自定义API密钥"
+      description: "用于访问自定义模型的API密钥（可选）"
+
+    custom_api_base_url:
+      name: "自定义API基础URL"
+      description: "自定义模型的API基础URL（可选）"
+
+    custom_api_model:
+      name: "自定义API模型"
+      description: "要使用的自定义API模型名称（可选）"
+
+    mcp_default_language:
+      name: "MCP默认语言"
+      description: "MCP的默认语言设置"
