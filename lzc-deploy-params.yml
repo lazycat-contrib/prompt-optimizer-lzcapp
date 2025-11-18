@@ -25,6 +25,13 @@ params:
     type: string
     name: "deepseek api key"
     description: "the deepseek key"
+    default_value: "sk-xxxxxx"
+    optional: true
+
+  - id: zhipu_apikey
+    type: string
+    name: "zhipu api key"
+    description: "the zhipu key"
     optional: true
 
   - id: siliconflow_apikey
@@ -57,6 +64,12 @@ params:
     description: "mcp default language"
     default_value: "zh"
 
+  - id: mcp_default_model_provider
+    type: string
+    name: "mcp default model provider"
+    description: "mcp default model provider"
+    default_value: "deepseek"
+
 locales:
   zh:
     access_username:
@@ -79,9 +92,13 @@ locales:
       name: "Deepseek API密钥"
       description: "用于访问Deepseek模型的API密钥（可选）"
 
+    zhipu_apikey:
+      name: "智谱AI API密钥"
+      description: "用于访问智谱AI的API密钥（可选）"
+
     siliconflow_apikey:
-      name: "Siliconflow API密钥"
-      description: "用于访问Siliconflow模型的API密钥（可选）"
+      name: "硅基流动 API密钥"
+      description: "用于访问硅基流动模型的API密钥（可选）"
 
     custom_apikey:
       name: "自定义API密钥"
@@ -98,3 +115,7 @@ locales:
     mcp_default_language:
       name: "MCP默认语言"
       description: "MCP的默认语言设置"
+
+    mcp_default_model_provider:
+      name: "MCP默认模型提供商"
+      description: "MCP的默认模型提供商设置"

@@ -33,6 +33,7 @@ services:
       - VITE_GEMINI_API_KEY={{.U.gemini_apikey}}
       - VITE_DEEPSEEK_API_KEY={{.U.deepseek_apikey}}
       - VITE_SILICONFLOW_API_KEY={{.U.siliconflow_apikey}}
+      - VITE_ZHIPU_API_KEY={{.U.zhipu_apikey}}
       - VITE_CUSTOM_API_KEY={{.U.custom_apikey}}
       - VITE_CUSTOM_API_BASE_URL={{.U.custom_api_base_url}}
       - VITE_CUSTOM_API_MODEL= {{.U.custom_api_model}}
@@ -40,7 +41,7 @@ services:
       # - MCP_HTTP_PORT=${MCP_HTTP_PORT:-3000}  # Docker中固定使用3000端口
       - MCP_LOG_LEVEL=${MCP_LOG_LEVEL:-debug}
       - MCP_DEFAULT_LANGUAGE={{.U.mcp_default_language}}
-      - MCP_DEFAULT_MODEL_PROVIDER=${MCP_DEFAULT_MODEL_PROVIDER:-openai}
+      - MCP_DEFAULT_MODEL_PROVIDER={{.U.mcp_default_model_provider}}
 
       # Basic认证配置（可选）
       - ACCESS_USERNAME={{.U.access_username}}
