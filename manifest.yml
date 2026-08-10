@@ -3,23 +3,19 @@ application:
   background_task: true
   public_path:
     - /
-
   upstreams:
     - location: /
       backend: http://prompt-optimizer:80/
-
     - location: /mcp
       backend: http://prompt-optimizer:3000/
-
 services:
   prompt-optimizer:
     # linshen/prompt-optimizer:2.2.1
-    image: registry.lazycat.cloud/czyt/linshen/prompt-optimizer:64974b8fdfbb4946
-
+    # upstream: docker.io/linshen/prompt-optimizer:2.11.8
+    image: registry.lazycat.cloud/czyt/linshen/prompt-optimizer:76b4b80df772857f
     environment:
       # nginx内部端口配置
       - NGINX_PORT=${NGINX_PORT:-80}
-
       # Web应用API配置
       - VITE_OPENAI_API_KEY={{.U.openai_apikey}}
       - VITE_GEMINI_API_KEY={{.U.gemini_apikey}}
@@ -34,7 +30,6 @@ services:
       - MCP_LOG_LEVEL=${MCP_LOG_LEVEL:-debug}
       - MCP_DEFAULT_LANGUAGE={{.U.mcp_default_language}}
       - MCP_DEFAULT_MODEL_PROVIDER={{.U.mcp_default_model_provider}}
-
       # Basic认证配置（可选）
       - ACCESS_USERNAME={{.U.access_username}}
       - ACCESS_PASSWORD={{.U.access_password}}
