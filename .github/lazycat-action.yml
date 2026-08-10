@@ -1,0 +1,41 @@
+version: 1
+
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: dist/application.lpk
+  target_arch: amd64
+
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: prompt-optimizer
+
+build:
+  run_buildscript: false
+
+images:
+  - id: prompt-optimizer
+    target: service
+    service: prompt-optimizer
+    source: docker.1ms.run/linshen/prompt-optimizer
+    channel: stable
+    sort: semver
+    tag_regex: '^\d+\.\d+\.\d+$'
+    delivery:
+      mode: lazycat
+
+stores:
+  official:
+    enabled: true
+    skip_if_version_exists: true
+    retry:
+      enabled: false
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: AI提示词优化器
+    summary: 由 GitHub Actions 自动发布

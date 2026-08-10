@@ -5,43 +5,43 @@ params:
     description: "the access username"
 
   - id: access_password
-    type: string
+    type: secret
     name: "access password"
     description: "the access password"
 
   - id: openai_apikey
-    type: string
+    type: secret
     name: "openapi api key"
     optional: true
     description: "the openai api key"
 
   - id: gemini_apikey
-    type: string
+    type: secret
     name: "gemini api key"
     description: "the gemini api key"
     optional: true
 
   - id: deepseek_apikey
-    type: string
+    type: secret
     name: "deepseek api key"
     description: "the deepseek key"
     default_value: "sk-xxxxxx"
     optional: true
 
   - id: zhipu_apikey
-    type: string
+    type: secret
     name: "zhipu api key"
     description: "the zhipu key"
     optional: true
 
   - id: siliconflow_apikey
-    type: string
+    type: secret
     name: "siliconflow api key"
     description: "the siliconflow api key"
     optional: true
 
   - id: custom_apikey
-    type: string
+    type: secret
     name: "custom api key"
     description: "the custom api key"
     optional: true

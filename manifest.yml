@@ -1,10 +1,3 @@
-min_os_version: 1.3.8
-name: AI提示词优化器
-package: cloud.lazycat.app.prompt-optimizer
-version: 2.2.1
-description: 一个好用的提示词优化工具，帮助你优化和测试AI提示词
-homepage: https://github.com/linshenkx/prompt-optimizer
-author: linshenkx
 application:
   subdomain: prompt-optimizer
   background_task: true
@@ -22,7 +15,6 @@ services:
   prompt-optimizer:
     # linshen/prompt-optimizer:2.2.1
     image: registry.lazycat.cloud/czyt/linshen/prompt-optimizer:64974b8fdfbb4946
-    container_name: prompt-optimizer
 
     environment:
       # nginx内部端口配置
@@ -46,11 +38,3 @@ services:
       # Basic认证配置（可选）
       - ACCESS_USERNAME={{.U.access_username}}
       - ACCESS_PASSWORD={{.U.access_password}}
-
-locales:
-  zh:
-    name: "AI提示词优化器"
-    description: "一个好用的提示词优化工具，帮助你优化和测试AI提示词"
-  en:
-    name: "Prompt Optimizer"
-    description: "A powerful AI prompt optimization tool that helps you write better AI prompts and improve the quality of AI outputs"

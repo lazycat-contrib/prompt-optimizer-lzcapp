@@ -1,0 +1,17 @@
+package: cloud.lazycat.app.prompt-optimizer
+version: 2.2.1
+name: AI提示词优化器
+description: 一个好用的提示词优化工具，帮助你优化和测试AI提示词
+homepage: https://github.com/linshenkx/prompt-optimizer
+author: linshenkx
+min_os_version: 1.5.0
+permissions:
+  required:
+    - net.internet
+locales:
+  zh:
+    name: "AI提示词优化器"
+    description: "一个好用的提示词优化工具，帮助你优化和测试AI提示词"
+  en:
+    name: "Prompt Optimizer"
+    description: "A powerful AI prompt optimization tool that helps you write better AI prompts and improve the quality of AI outputs"
