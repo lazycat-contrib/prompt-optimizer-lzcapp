@@ -21,7 +21,7 @@ images:
   - id: prompt-optimizer
     target: service
     service: prompt-optimizer
-    source: docker.1ms.run/linshen/prompt-optimizer
+    source: docker.io/linshen/prompt-optimizer
     channel: stable
     sort: semver
     tag_regex: '^\d+\.\d+\.\d+$'
