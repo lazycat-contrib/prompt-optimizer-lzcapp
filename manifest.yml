@@ -11,8 +11,8 @@ application:
 services:
   prompt-optimizer:
     # linshen/prompt-optimizer:2.2.1
-    # upstream: docker.io/linshen/prompt-optimizer:2.11.8
-    image: registry.lazycat.cloud/czyt/linshen/prompt-optimizer:76b4b80df772857f
+    # upstream: docker.io/linshen/prompt-optimizer:2.11.10
+    image: registry.lazycat.cloud/czyt/linshen/prompt-optimizer:fd9da25b06356eab
     environment:
       # nginx内部端口配置
       - NGINX_PORT=${NGINX_PORT:-80}
