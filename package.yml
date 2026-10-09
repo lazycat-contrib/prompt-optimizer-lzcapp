@@ -1,4 +1,5 @@
 package: cloud.lazycat.app.prompt-optimizer
+license: AGPL-3.0
 version: 2.11.10
 name: AI提示词优化器
 description: 一个好用的提示词优化工具，帮助你优化和测试AI提示词
